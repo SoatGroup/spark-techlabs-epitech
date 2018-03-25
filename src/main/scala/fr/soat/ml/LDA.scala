@@ -1,7 +1,9 @@
+package fr.soat.ml
+
 import org.apache.log4j.{Level, Logger}
-import org.apache.spark.sql.SparkSession
 import org.apache.spark.mllib.clustering.{DistributedLDAModel, LDA}
 import org.apache.spark.mllib.linalg.Vectors
+import org.apache.spark.sql.SparkSession
 
 object LDA extends App{
 

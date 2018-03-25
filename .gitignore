@@ -2,3 +2,5 @@
 *.log
 target
 .idea
+src/main/resources/clusters/data
+src/main/resources/clusters/upload

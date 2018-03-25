@@ -1,5 +1,5 @@
 #!/bin/bash
-# nc localhost 9999 on another console to read the  published message
+# nc localhost 9999 on another console to read the  published messages
 
 filename='logfile.log'
 echo Start

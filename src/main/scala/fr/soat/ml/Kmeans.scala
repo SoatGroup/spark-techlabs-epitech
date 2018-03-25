@@ -1,5 +1,6 @@
+package fr.soat.ml
 
-import org.apache.log4j.{Level, Logger}
+
 import org.apache.spark.mllib.clustering.{KMeans, KMeansModel}
 import org.apache.spark.mllib.linalg.Vector
 import org.apache.spark.mllib.random.RandomRDDs

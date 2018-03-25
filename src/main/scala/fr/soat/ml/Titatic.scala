@@ -1,12 +1,14 @@
-import org.apache.log4j.{Logger, Level}
+package fr.soat.ml
+
+import org.apache.log4j.{Level, Logger}
 import org.apache.spark.ml.Pipeline
 import org.apache.spark.ml.classification.RandomForestClassifier
 import org.apache.spark.ml.evaluation.BinaryClassificationEvaluator
-import org.apache.spark.ml.feature.{IndexToString, VectorAssembler, StringIndexer}
+import org.apache.spark.ml.feature.{IndexToString, StringIndexer, VectorAssembler}
 import org.apache.spark.ml.tuning.{CrossValidator, ParamGridBuilder}
-import org.apache.spark.sql.{SparkSession, DataFrame, Row}
+import org.apache.spark.sql.functions.{avg, _}
 import org.apache.spark.sql.types._
-import org.apache.spark.sql.functions._
+import org.apache.spark.sql.{DataFrame, Row, SparkSession}
 
 object Titanic {
 
@@ -22,7 +24,6 @@ object Titanic {
       .builder()
       .appName("Titanic")
       .getOrCreate()
-    import spark.implicits._
 
     val (dataDFRaw, predictDFRaw) = loadData(args(0), args(1), spark)
 
